@@ -1,5 +1,7 @@
 # opencv-python 数玉米
 
+> 2019年数字图像处理结课作业
+
 [官网](https://github.com/DukeBode/OpenCV/tree/corn)
 
 - 开发环境 Windows 10 1909
