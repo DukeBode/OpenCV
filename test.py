@@ -3,19 +3,18 @@ import numpy as np
 from os.path import join,abspath
 
 # 图像
-images = ['药物颗粒.jpg','玉米颗粒.jpg']
-
-image = abspath(join('src',images[1]))
+images = ['玉米颗粒.jpg']
+# 获取图片路径
+image = abspath(join('src',images[0]))
 # 显示图片
-def show(img,winname='windows',x=900,y=700):
-    cv2.imshow(winname,cv2.resize(img,(x,y)))
+def show(img,winname='windows'):
     cv2.imshow(winname,img)
     cv2.waitKey()
 
 # 界面设置
-cv2.namedWindow('windows',0)
-cv2.moveWindow('windows',0,0)
-
+cv2.namedWindow('windows',cv2.WINDOW_NORMAL)
+# 全屏显示
+cv2.setWindowProperty('windows',cv2.WND_PROP_FULLSCREEN,cv2.WINDOW_FULLSCREEN)
 # 获取图像
 show(img := cv2.imdecode(np.fromfile(image,dtype=np.uint8),1))
 # 灰度图像
@@ -38,6 +37,5 @@ i=0
 for contour in cv2.findContours(np.uint8(imgs), cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)[0]:
     if len(contour)>4:
         i= i+1
-        cv2.ellipse(img,cv2.fitEllipse(contour),(0,255,255),3)
-        show(img)
-print(i)
+        show(cv2.putText(img,str(i),tuple(contour[1][0]),cv2.FONT_HERSHEY_SIMPLEX,5,(255,255,0),15))
+        

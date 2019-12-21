@@ -4,6 +4,8 @@
 
 [官网](https://github.com/DukeBode/OpenCV/tree/corn)
 
+![demo](GIF_2019-12-21_18-33-21.gif)
+
 - 开发环境 Windows 10 1909
 - 语言要求 Python 3.8.0 （最低要求）
 
