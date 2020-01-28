@@ -3,6 +3,7 @@
 > 2019年数字图像处理结课作业
 
 [官网](https://github.com/DukeBode/OpenCV/tree/corn)
+[课件](https://mooc1-2.chaoxing.com/course/204532551.html)
 [下载](https://github.com/DukeBode/OpenCV/archive/corn.zip)
 
 ![demo](GIF_2019-12-21_18-33-21.gif)
